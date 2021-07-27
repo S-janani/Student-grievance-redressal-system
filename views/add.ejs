@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    input
+    {
+    border-style: solid;
+    height: 35px;
+    border-width:3px;
+    width:100%;
+    border-color: black;  
+    }
+    input:hover
+    {
+    border-color: black;
+    box-shadow:0 3px 8px #f0f02f;
+    color: black;
+    font-weight: bold;
+    }
+    </style>    
+<title>Document</title>
+</head>
+<body style="background: linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);background-size: cover;">
+  <header class="header">
+     <div class="container" style="width:100%">
+         <div class="row" style="background:linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);">
+         <div class="col-sm-3" style="padding:10px;">
+         <img src="/asset/AU.png" class="logo" class="img-responsive" style="margin-left:90px;width:150px">
+         </div>
+         <div class="col-sm-9" style="padding-top:20px;padding-right:45px ;" >
+          <h1 style="color:white;font-weight: bold;"> Student Grievance Redressal Commission</h1> 
+         </div>
+         </div>
+    </div>
+        <nav class="nav bar navbar-style">
+            <div class="container" >
+                  <div class="navbar-header"> 
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target ="#micon">
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                     </button>
+                 </div>
+                 <div class="collapse navbar-collapse" id="micon">
+                   <ul class="nav navbar-nav navbar-left">
+                     <li><a href="/admincomplaints/" onmouseover="this.style.background='white'"   onMouseOut="this.style.background=''"  >Complaints</a></li>
+                     <li><a href="/reopencomplaints/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''" >Reopen Complaints </a></li>
+                     <li><a href="/escalatecomplaints/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''" >Escalated Complaints</a></li>
+                     <li><a href="/addmembers/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''">Add Members</a></li>
+                     <li><a href="/deletemembers/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''">Delete Members</a></li>
+                   </ul >
+                   <ul class="nav navbar-nav navbar-right">  
+                    <li ><a href="/adminlogout/" onmouseover="this.style.background='white'"   onMouseOut="this.style.background=''" style="align-items:right ;" >Logout </a></li>
+                  </ul>
+                 </div>
+            </div>        
+        </nav>  
+         <br>
+         <br>
+         <form action="/addmembers/" method="POST">
+           <div class="container" >
+               <div class="row" >
+                   <div class="col-sm" style="padding-left:45px;" >
+                   <label><h3 style="color:white;margin:auto; font-weight: bold">Add New Respective Heads</h3></label> 
+                   </div>
+              </div>
+              <br>
+              <br>
+              <div class="row">
+                  <div class="col-sm-4" style="padding-left:45px;" >    
+                   <label ><h4 style="color:white;margin:auto; font-weight: bold">Name</h4></label>
+                  </div>
+                  <div class="col-sm-6" style="padding-left:45px">
+                    <div class="form-group">
+                    <input   type="text" name="name" class="form-control1">
+                    </div>
+                </div>
+               </div>
+               <div class="row">
+                <div class="col-sm-4" style="padding-left:45px;" >    
+                 <label ><h4 style="color:white;margin:auto; font-weight: bold">Contact No</h4></label>
+                </div>
+                <div class="col-sm-6" style="padding-left:45px">
+                    <div class="form-group">
+                    <input  type="tel" name="contactno"  class="form-control1" >
+                    </div>  
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-sm-4" style="padding-left:45px;" >    
+                 <label ><h4 style="color:white;margin:auto; font-weight: bold">Email</h4></label>
+                </div>
+                <div class="col-sm-6" style="padding-left:45px">
+                    <div class="form-group">
+                    <input  type="email" name="email"  class="form-control1" >
+                    </div>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-sm-4" style="padding-left:45px;" >    
+                 <label ><h4 style="color:white;margin:auto; font-weight: bold">Department</h4></label>
+                </div>
+                <div class="col-sm-6" style="padding-left:45px">
+                    <div class="form-group">
+                        <select class="form-control1"  name="category" id="category" style="border-style:solid;height: 40px;border-color: black;border-width:3px;background: white;color:blue; text-transform: uppercase;width: 100%;"  >
+                          <option>Irregularity in the admission process</option>
+                          <option>Exam related issues</option>
+                          <option>Hostel</option>
+                          <option>Mess</option>
+                          <option>SC/ST Cell</option>
+                          <option>Scholarschip irregularity</option>
+                        
+                          <option>Ragging</option>
+                          <option>Sexual Harressment</option>
+                          <option>Library management</option>
+                          <option>College Eco Management</option>
+                          <option>Health center</option>
+                          <option>Online class</option>
+                        </select>
+                    </div>
+                </div>
+             </div>
+             <br>
+             <div class="row">
+              <div class="col-sm-4" style="padding-left:45px;">
+                </div>     
+              <div class="col-sm-6" style="padding-left:45px;">
+              <p align="right"> <input type="submit" value="ADD"   style=" border: 2px solid blue;
+                border-radius: 8px;height:40px;background-color:white;font-weight: bold;color:blue;width: 50%;   box-shadow:0 3px 9px blue;" >
+           </p> </div>    
+              
+             </div>
+           </div>
+           </form>
+    </header>
+    
+</body>
+</html> 

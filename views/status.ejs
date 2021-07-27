@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+input
+{
+border-style: solid;
+height: 40px;
+border-color:blue;  
+}
+input:hover
+{
+border-color: blue;
+box-shadow:0 5px 10px blue;
+}
+</style>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/progress-wizard.min.css" rel="stylesheet">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/progress-wizard.min.css" rel="stylesheet">
+   <!-- Latest compiled and minified JavaScript -->
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body style="background: linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);background-size: cover;">
+    <header class="header">
+       <div class="container" style="width:100%">
+           <div class="row" style="background:linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);">
+           <div class="col-sm-3" style="padding:10px ;">
+            <img src="/asset/AU.png" class="logo" class="img-responsive" style="margin-left:90px;width:150px">
+           </div>
+           <div class="col-sm-6" style="padding-top:20px;padding-right:45px ;" >
+            <h1 style="color:white;font-weight: bold;"> Student Grievance Redressal Commission</h1> 
+           </div>
+           <div class="col-sm-1" style="padding:10px" >
+            <center><img src="/asset/student.png" class="logo" class="img-responsive" style="margin-right:90px;width:100px;"></center>
+          </div>
+          <div class="col-sm-2" style="padding-top:20px;padding-right:45px ;" >
+            <h1 style="color:white;font-size: 30px;"> <%= name %></h1>
+            <h1 style="color:white;font-size: 30px"> <%= regno %></h1>
+           </div>
+           </div>
+      </div>
+          <nav class="nav bar navbar-style">
+              <div class="container" >
+                    <div class="navbar-header"> 
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target ="#micon">
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                       </button>
+                   </div>
+                   <div class="collapse navbar-collapse" id="micon">
+                      <ul class="nav navbar-nav navbar-left" >
+                        <li><a href="/studentdashboard/" onmouseover="this.style.background='white'"   onMouseOut="this.style.background=''"  >Home</a></li>
+                        <li><a href="/registercomplaint/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''" >Register Complaint </a></li>
+                        <li><a href="/status/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''" >status</a></li>
+                      </ul >
+                      <ul class="nav navbar-nav navbar-right">  
+                       <li ><a href="/logout/" onmouseover="this.style.background='white'"   onMouseOut="this.style.background=''" style="align-items:right ;" >Logout </a></li>
+                     </ul>
+                   </div>
+              </div>        
+          </nav>
+<br/>    
+<br/>
+<br/>
+<div class="container" > 
+    
+<div class="row" style="padding-left:45px">
+  <label><h2 style="font-weight:bold;color:white">Enter The Reference Id</h2></label>
+</div>
+<br/>
+<div class="row">
+    <div class="col-sm-8">
+        <div class="form-group" style="padding-left:30px;">
+            <input  type="text" name="id" value="" id="complaintid" style="width:100%;border-color:black;" class="form control" >
+        </div>
+    </div>
+    <div class="form-group" style="padding-left:30px;" >
+        <div class="col-sm-4">
+            <input type="button" value="SUBMIT" id="submit" style="background-color:white;font-weight: bold;color:blue;width:100%;   box-shadow:0 5px 10px blue;">
+        </div >
+    </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+    <div class="container" style="display:none" id="status">
+
+            <div class="row" style="padding-left:30px;" >
+                <label><h2 style="font-weight:bold;color:white">Status of Your Application</h2></label>
+              </div>
+              <br/>
+               <div class="row">
+                <div class="col-sm"> 
+            <ul class="progress-indicator">
+                <li  id='1' >  
+                    <span class="bubble"></span> 
+                    <h4  style="font-weight:bold;color:white;">Admin</h4> 
+                </li>
+                <li id='2' >
+                    <span class="bubble"></span>
+                    <h4  style="font-weight:bold;color:white"> Respective Heads</h4> 
+                </li>
+                <li id='3' >
+                    <span class="bubble" ></span>
+                    <h4  style="font-weight:bold;color:white">In progress</h4> 
+                </li>
+                <li id='4' >
+                    <span class="bubble" ></span>
+                    <h4  style="font-weight:bold;color:white">  Complaint resolved</h4>
+                </li>
+            </ul>
+               </div>
+               </div>
+            </div>
+    </header>
+    <script>
+        $('#complaintid').keypress(function(event){
+            console.log("enter into ");
+            var complaintid=document.getElementById("complaintid").value;
+            $.ajax({
+                type:"post",
+                url:'/status/',
+                data:{complaintno: complaintid},
+                success:function(jd){
+                    console.log(jd.status);
+                   $("#status").css('display', 'block');
+                var i=1;
+
+                if(jd.status-1!=0)
+                {
+                   for( i=1;i<jd.status;i++)
+                {
+                    console.log(i);
+                    if(i==1)
+                 {$('#1').replaceWith("<li id='1' class='completed'> <span class='bubble'></span><h4  style='font-weight:bold;color:white;'>Admin</h4></li>");
+                 }
+                 else if(i==2)
+                 {$('#2').replaceWith("<li id='2' class='completed'> <span class='bubble'></span><h4  style='font-weight:bold;color:white'> Respective Heads</h4></li>");
+                 }
+               else if(i==3)
+                 {$('#3').replaceWith("<li id='3' class='completed'>  <span class='bubble'></span> <h4 style='font-weight:bold;color:white'>In progress</h4></li>");
+                 }
+                  else
+                 {$('#4').replaceWith("<li id='4' class='completed'><span class='bubble'></span><h4  style='font-weight:bold;color:white'>  Complaint resolved</h4></li>");
+                 }
+                }
+                }
+                if(i==1)
+                $('#1').replaceWith("<li id='1' class='active'> <span class='bubble'></span><h4  style='font-weight:bold;color:white'> Respective Heads</h4></li>");    
+               else if(i==2)
+                 $('#2').replaceWith("<li id='2' class='active'> <span class='bubble'></span><h4  style='font-weight:bold;color:white'> Respective Heads</h4></li>");   
+                   else if(i==3)
+                   $('#3').replaceWith("<li id='3' class='active'>  <span class='bubble'></span> <h4 style='font-weight:bold;color:white'>In progress</h4></li>");
+                   else
+                   $('#4').replaceWith("<li id='4' class='active'><span class='bubble'></span><h4  style='font-weight:bold;color:white'>  Complaint resolved</h4></li>"); 
+            }
+            })
+        });
+        $('#submit').on('click',function(){
+            console.log("enter into ");
+            var complaintid=document.getElementById("complaintid").value;
+            $.ajax({
+                type:"post",
+                url:'/status/',
+                data:{complaintno: complaintid},
+                success:function(jd){
+                    console.log(jd.status);
+                   $("#status").css('display', 'block');
+                var i=1;
+                if(jd.status-1!=0)
+                {
+                   for( i=1;i<jd.status;i++)
+                {
+                    console.log(i);
+                    if(i==1)
+                 {$('#1').replaceWith("<li id='1' class='completed'> <span class='bubble'></span><h4  style='font-weight:bold;color:white;'>Admin</h4></li>");
+                 }
+                 else if(i==2)
+                 {$('#2').replaceWith("<li id='2' class='completed'> <span class='bubble'></span><h4  style='font-weight:bold;color:white'> Respective Heads</h4></li>");
+                 }
+               else if(i==3)
+                 {$('#3').replaceWith("<li id='3' class='completed'>  <span class='bubble'></span> <h4 style='font-weight:bold;color:white'>In progress</h4></li>");
+                 }
+                  else
+                 {$('#4').replaceWith("<li id='4' class='completed'><span class='bubble'></span><h4  style='font-weight:bold;color:white'>  Complaint resolved</h4></li>");
+                 }
+                }
+                }
+                if(i==1)
+                $('#1').replaceWith("<li id='1' class='active'> <span class='bubble'></span><h4  style='font-weight:bold;color:white'> Admin</h4></li>");    
+               else if(i==2)
+                 $('#2').replaceWith("<li id='2' class='active'> <span class='bubble'></span><h4  style='font-weight:bold;color:white'> Respective Heads</h4></li>");   
+                   else if(i==3)
+                   $('#3').replaceWith("<li id='3' class='active'>  <span class='bubble'></span> <h4 style='font-weight:bold;color:white'>In progress</h4></li>");
+                   else if(i==4)
+                   $('#4').replaceWith("<li id='4' class='active'><span class='bubble'></span><h4  style='font-weight:bold;color:white'>  Complaint resolved</h4></li>"); 
+            }
+            })
+        });
+    </script>
+</body>
+</html>

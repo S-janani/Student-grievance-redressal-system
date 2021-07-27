@@ -1,0 +1,50 @@
+*{
+  margin:0;
+  padding:0;
+  
+}
+.header
+{
+height:30vh; 
+}
+.navbar-style
+{ 
+     box-shadow:0 5px 10px #f0f02f;
+     text-transform: uppercase;
+     background:black ;
+}
+.logo
+{
+    height: 150px;
+    width: 200px;
+}
+.icon-bar
+{
+  background:#ffff00;
+}
+.head
+{
+  background:black;
+}
+li a 
+{
+ color:white ;
+ font-weight: bold;
+}
+.drop
+{
+  color:white
+}
+.drop:hover
+{
+  background:#ffff00 ;
+}
+.container-bottom
+{
+	color: black;
+	margin-bottom: 50%;
+	height:50%;
+	padding: 18px;
+	display: flex;
+	justify-content: space-between;
+}

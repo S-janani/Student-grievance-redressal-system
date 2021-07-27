@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <style>
+        div.ex1 {
+  background:linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);
+  width: 100%;
+  height: 60px;
+  overflow: auto;
+  color:white;
+  font-size: 18px;
+}
+.es{
+  width:30%;
+}
+div.image{
+width: 100%;
+height: 170px;
+
+
+}
+div.ex {
+ background-color: white;
+  width:100%;
+  height: 100px;
+  overflow: auto;
+  color:black;
+  font-size: 18px;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow:auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.name
+{
+  background-color: white;
+  align-items:left;
+}
+.mark-display
+{
+	padding: 10px;
+  background:linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);
+   border-radius: 5px  ;
+  width: 100%;
+  height:50px;
+  color:white;
+  position: absolute;
+  top: 8px;
+  right: 0px;
+  font-size: 18px;
+  box-shadow:0 5px 10px white;
+  text-transform: uppercase;  
+}
+    </style>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background: linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);background-size: cover;">
+  <header class="header">
+     <div class="container" style="width:100%">
+         <div class="row" style="background:linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);">
+         <div class="col-sm-3" style="padding:10px;">
+         <img src="/asset/AU.png" class="logo" class="img-responsive" style="margin-left:90px;width:150px">
+         </div>
+         <div class="col-sm-9" style="padding-top:20px;padding-right:45px ;" >
+          <h1 style="color:white;font-weight: bold;"> Student Grievance Redressal Commission</h1> 
+         </div>
+         </div>
+    </div>
+        <nav class="nav bar navbar-style">
+            <div class="container" >
+                  <div class="navbar-header"> 
+                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target ="#micon">
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                         <span class="icon-bar"></span>
+                     </button>
+                 </div>
+                 <div class="collapse navbar-collapse" id="micon">
+                   <ul class="nav navbar-nav navbar-left">
+                     <li><a href="/admincomplaints/" onmouseover="this.style.background='white'"   onMouseOut="this.style.background=''"  >Complaints</a></li>
+                     <li><a href="/reopencomplaints/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''" >Reopen Complaints </a></li>
+                     <li><a href="/escalatecomplaints/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''" >Escalated Complaints</a></li>
+                     <li><a href="/addmembers/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''">Add Members</a></li>
+                     <li><a href="/deletemembers/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''">Delete Members</a></li>
+                   </ul >
+                   <ul class="nav navbar-nav navbar-right">  
+                   <li ><a href="/adminlogout/" onmouseover="this.style.background='white'"   onMouseOut="this.style.background=''" style="align-items:right ;" >Logout </a></li>
+                 </ul>
+                 </div>
+            </div>        
+        </nav>  
+        <br>
+        <br>
+           <br>
+           <br>
+          
+           <% if ( passcomplaints.length > 0 ) { %>
+            <div class="card-body" style="padding-left:30px;padding-right: 30px;">
+             <table class="table table-dark table-bordered" style="background:white;border: 2px solid black;color: #ffff00" >
+                 <thead>
+                   <tr>
+                     <th scope="col"  style="color:black;font-size:20px;"><center>Complaints</center></th>
+                     <th scope="col"  style="color:black;font-size:18px;"><center>Forward</center></th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <% for (let complaints of passcomplaints ) { %>
+                   <tr class="<%= complaints.id %>">
+                    <td>
+                      <a onclick="popup(this)" id="<%= complaints.id %>">
+                       <div class="ex1">
+                      <%= complaints.description %>
+                       </div>
+                       </a>  
+                     </td>               
+                     
+                      <td><input type="submit" id="<%= complaints.id %>"  class="btn btn-primary badge-pill" style="font-weight:bold;width: 100%;background: linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);" value="Forward" onclick="change(this)"></td>
+                   </tr>
+                   <% } %>
+                 </tbody>
+               </table>
+               <% } else { %>
+                 <h1> No Complaints Registered Yet Now </h1>
+                 <% } %>
+      </div>
+      <br>
+      <div id="myModal" class="modal" style="overflow: auto;" >
+
+        <!-- Modal content -->
+        <div class="modal-content" >
+          <span class="close">&times;</span>    
+        
+        <div class="row">
+          <h3><center> Complaints Details</center></h3>
+        </div>
+        <div class="card-body" style="padding-left:30px;padding-right: 30px;">
+          <table class="table table-dark table-bordered" style="background:white;border: 2px solid black;color:black" >
+              
+              <tbody>
+               
+                  <tr>
+                    <td class="es" ><h4>Category</h4></td>
+                    <td><div class="ex" id="category">
+                      
+                      </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td class="es" ><h4>Description</h4></td>
+                    <td>
+                     <div class="ex" id="description">
+                       food is not tastety, mess is not cleaned properly, hostel wardens are rude,asdfggfdhjrtyuy trytrwuhy tyhgrtjhfhf  ytyhrrjuhgreocbjhug
+                       </div>
+                    </td>
+                  </tr>
+               <tr>
+                 <td class="es" ><h4>Attachments</h4></td>
+                 <td id="attachment">
+                  <div class="image" id="image">
+                    <img  src="/asset/1.jpg" style="width: 100%;height: 170px;">
+                    </div>
+                  </td>
+               </tr>         
+              </tbody>
+            </table>
+      </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      function change(select){
+      console.log(select);
+      console.log(select.id);
+      var complaintid=select.id;
+      $.ajax({
+        type:"post",
+        url:'/reopencomplaints/',
+        data:{complaintid:complaintid},
+        success:function(jd){
+          console.log(jd.success);
+          var clas='.'.concat(complaintid);
+          //console.log(id);
+          $(clas).replaceWith(" ");
+        }
+      })
+
+    }
+    function popup(select){
+      console.log("popup");
+      console.log(select.id);
+      var id=select.id;
+      var modal = document.getElementById("myModal");
+
+      $.ajax({
+        type:"post",
+        url:'/admindetails/',
+        data:{complaintid:id},
+        success:function(jd){
+          console.log(jd.complaint.category);
+          var span = document.getElementsByClassName("close")[0];
+          $("#category").replaceWith("<div class='ex' id='category'>"+ jd.complaint.category+"</div>");
+          $("#description").replaceWith(" <td class='es' id='description'><h4>"+jd.complaint.description+"</h4></td>");
+          if(jd.complaint.attachmentname)
+          {
+            $("#attachment").replaceWith("<td id='attachment'><div class='image' id='image'><img  src='/"+jd.complaint.attachmentname+"' style='width: 100%;height: 170px;'></div></td>");
+          }
+          else
+          {
+            $("#attachment").replaceWith("<td id='attachment'><div class='ex'> No attachments found</div></td>");
+          }
+          // When the userzs clicks the button, open the modal 
+  modal.style.display = "block";
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+   window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}   
+        }
+      });
+// Get the <span> element that closes the modal
+ }
+    </script>
+</body>
+</html> 

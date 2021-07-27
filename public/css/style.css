@@ -1,0 +1,58 @@
+*{
+  margin:0;
+  padding:0;
+}
+.header
+{
+height:100vh; 
+}
+.navbar-style
+{ 
+     box-shadow:0 5px 10px white;
+     text-transform: uppercase;
+     background: linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);;
+}
+.logo
+{
+    height: 150px;
+    width: 200px;
+}
+.icon-bar
+{
+  background:white ;
+}
+.head
+{
+  background:linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);;
+}
+li a 
+{
+ color:white ;
+ font-weight: bold;
+}
+.drop
+{
+  color:white
+}
+.drop:hover
+{
+  background: white;
+}
+input[type="radio"]{
+  vertical-align: middle;
+}
+
+input[type="radio"]:hover
+{
+background: blue;
+}
+
+#hov:hover
+{
+  
+  background:white ;
+}
+.table
+{
+border-color:white ;
+}

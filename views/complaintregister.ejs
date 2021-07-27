@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>complaint</title>
+  <meta charset="utf-8">
+ 
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" type="text/css" href="/css/style1.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="input.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+</head>
+<body style="background: linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);background-size: cover;">
+ <header class="header">
+    <div class="container" style="width:100%">
+        <div class="row" style="background:linear-gradient(90deg, rgba(6,2,64,1) 0%, rgba(18,4,154,1) 11%, rgba(24,7,203,1) 18%, rgba(109,101,252,1) 50%, rgba(24,7,203,1) 81%, rgba(19,5,156,1) 89%, rgba(6,2,64,1) 100%);">
+        <div class="col-sm-3" style="padding:10px ;">
+          <img src="/asset/AU.png" class="logo" class="img-responsive" style="margin-left:90px;width:150px">
+        </div>
+        <div class="col-sm-6" style="padding-top:20px;padding-right:45px ;" >
+         <h1 style="color:white;font-weight: bold"> Student Grievance Redressal Commission</h1> 
+        </div>
+        <div class="col-sm-1" style="padding:10px" >
+          <center><img src="/asset/student.png" class="logo" class="img-responsive" style="margin-right:90px;width:100px;"></center>
+        </div>
+        <div class="col-sm-2" style="padding-top:20px;padding-right:45px ;" >
+          <h1 style="color:white;font-size: 30px;"> <%= name %></h1>
+          <h1 style="color:white;font-size: 30px"> <%= regno %></h1>
+         </div>
+        </div>
+   </div>
+       <nav class="nav bar navbar-style">
+           <div class="container" >
+                 <div class="navbar-header"> 
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target ="#micon">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="micon">
+                  <ul class="nav navbar-nav navbar-left" >
+                    <li><a href="/studentdashboard/" onmouseover="this.style.background='white'"   onMouseOut="this.style.background=''"  >Home</a></li>
+                    <li><a href="/registercomplaint/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''" >Register Complaint </a></li>
+                    <li><a href="/status/" onmouseover="this.style.background='white'"  onMouseOut="this.style.background=''" >status</a></li>
+                  </ul >
+                  <ul class="nav navbar-nav navbar-right">  
+                   <li ><a href="/logout/" onmouseover="this.style.background='white'"   onMouseOut="this.style.background=''" style="align-items:right ;" >Logout </a></li>
+                 </ul>
+                </div>
+           </div>        
+       </nav>
+       <br>
+       <br>
+<div class="container" >
+  <div class="row" style="padding-left:45px">
+    <label><h2 style="font-weight: bold;color:white;">Register Complaint</h2></label>
+  </div>
+  <br>
+  <form action="/registercomplaint/" method="POST" enctype="multipart/form-data" >
+  <!-- <div class="row">
+     <div class="col-sm-4" style="padding-left:45px;" >    
+        <label for="category" ><h4 style="font-weight:bold;color:white">Category:</h4></label>
+     </div>
+     <div class="col-sm-8"  style="padding-left:45px;">
+      <div class="form-group">
+       <select class="form-control1" name="category" id="category" style="border-style:solid;height: 40px;border-width:3px;background: white;color:blue; text-transform: uppercase;width: 100%;"  >
+       <option>Irregularity in the admission process</option>
+       <option>Exam Related Issues</option>
+       <option>Hostel</option>
+       <option>Mess</option>
+       <option>SC/ST Cell</option>
+       <option>Scholarschip irregularity</option>
+       <option>EEE</option>
+       <option>ECE</option>
+       <option>IST</option>
+       <option>MECH</option>
+       <option>CSE</option>
+       <option>Ragging</option>
+       <option>Sexual Harressment</option>
+       <option>Library management</option>
+       <option>College Eco Management</option>
+       <option>Health Center</option>
+      </select>
+     </div>
+     </div>
+  </div> -->
+  <div class="row" style="padding-left:45px">
+    <label><h4 style="font-weight:bold;color:white">Please Enter Complaint Description:</h4></label>
+  </div>
+    <div class="row" style="padding-left:45px">
+      <div  class="form-group" >
+      <textarea name="content"  id="YOUR_TEXTAREA_ID" style="width: 100%;" ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4" style="padding-left:45px;" >    
+         <label ><h4 style="font-weight:bold;color:white">Do you have any attechments:</h4></label>
+      </div>
+      <div class="col-sm-4" style="padding-left:45px">
+      <span ><input type="radio" name="attachment" value="1" onchange="showDiv(this)">&nbsp;&nbsp;
+        <label style="font-size:18px;vertical-align: middle;"><h4 style="font-weight:bold;color:white">Yes</h4></label> 
+      </span>
+      </div>
+      <div class="col-sm-4" style="padding-left:45px">
+        <span ><input type="radio" name="attachment" value="0" onchange="showDiv(this)">&nbsp;&nbsp;
+          <label style="font-size:18px;vertical-align: middle;"><h4 style="font-weight:bold;color:white">No</h4></label> 
+        </span>
+       </div>
+   </div>
+   <br>
+     <div class="row" style="display: none;" id="hiddendiv" >
+      <div class="col-sm-4" style="padding-left:45px;" >    
+        <label ><h4 style="font-weight:bold;color:white">Upload pdf:</h4></label>
+     </div>
+     <div class="col-sm-8" style="padding-left:45px">
+      <input  type="file" name="file" style="vertical-align: center;">
+     </div>
+     </div>
+     <br>
+     <div class="row">
+      <div class="col-sm-4" style="padding-left:45px;">
+        </div>    
+     <div class="col-sm-4" style="padding-left:45px;">
+     </div>    
+      <div class="col-sm-4" style="padding-left:45px;">
+      <p align="right"> <input type="submit" value="SUBMIT" onclick="change()"  style=" border: 2px solid blue;
+        border-radius: 8px;height:40px;background-color:white;font-weight: bold;color:blue;width: 100%;box-shadow:0 3px 9px blue;">
+   </p> </div>
+   <textarea id="1" name="des" style="display: none;"> 
+
+   </textarea >
+      </form>
+  </div>
+    </div>
+</header>
+<br>
+<br>
+<p>
+  <br>
+</p>
+<script src="\ckeditor.js"></script>
+<script>
+  CKEDITOR.replace('content');  
+</script>
+<script >
+  function showDiv(select){
+     if(select.value==1){
+      document.getElementById('hiddendiv').style.display = "block";
+     } else{
+      document.getElementById('hiddendiv').style.display = "none";
+     }
+  } 
+  function change(){
+console.log("going usbmit");
+  var html=CKEDITOR.instances.YOUR_TEXTAREA_ID.getSnapshot();
+    var dom=document.createElement("DIV");
+    dom.innerHTML=html;
+    var plain_text=(dom.textContent || dom.innerText);
+    document.getElementById("1").innerHTML = plain_text;
+    console.log(plain_text);
+  }
+
+   
+ </script>
+</body>
+</html>

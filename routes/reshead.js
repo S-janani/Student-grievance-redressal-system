@@ -1,0 +1,16 @@
+const express=require('express');
+const path=require('path');
+const isauth=require('../middleware/resauthentication');
+const router=express.Router();
+const headcontroller=require("../Control/reshead");
+router.get("/reslogin/",headcontroller.login);
+router.post("/reslogin/",headcontroller.logins);
+router.get("/reslogout/",isauth,headcontroller.logout);
+router.get("/headcomplaints/",isauth,headcontroller.getcomplaints);
+router.post("/notified/",isauth,headcontroller.notify);
+router.post("/report/",isauth,headcontroller.report);
+router.post("/headcomplaints/",isauth,headcontroller.complete);
+router.get("/notifyescalate/",isauth,headcontroller.notifyescalate);
+router.get("/notifyreopen/",isauth,headcontroller.notifyreopen);
+ router.post("/resdetails/",isauth,headcontroller.detailsection);
+module.exports=router;

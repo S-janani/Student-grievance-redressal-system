@@ -1,0 +1,9 @@
+{
+    "env":
+     {
+         "MONGO_USER": "ramani",
+         "MONGO_PASSWORD":"ragulramani",
+         "MONGO_DEFAULT_DATABASE": "sgc",
+         "MAIL":"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"
+     }
+}
